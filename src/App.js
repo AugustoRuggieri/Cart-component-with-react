@@ -14,8 +14,10 @@ function App() {
   return (
     <div className="App">
       <MyNavbar />
-      <Cart />
-      <TotalBox />
+      <div className="main-wrapper">
+        <Cart />
+        <TotalBox />
+      </div>
     </div>
   );
 }

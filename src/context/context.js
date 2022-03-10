@@ -1,6 +1,6 @@
 import React, { useReducer, useEffect, useContext } from "react";
 import reducer from "./reducer";
-import { ADD_ITEM, DELETE_ITEM, EMPTY_CART, LOADING_DATA, REMOVE_ITEM } from "./actions";
+import { ADD_ITEM, DELETE_ITEM, EMPTY_CART, LOADING_DATA, REMOVE_ITEM, TOTAL_PRICE, COUNTER } from "./actions";
 import prodotti from "../utils/products";
 
 const initialState = {
@@ -35,6 +35,11 @@ const AppProvider = ({children}) => {
     useEffect(() => {
         dispatch({type: LOADING_DATA, payload: [...prodotti]})
     }, []);
+
+    useEffect(() => {
+        dispatch({type: TOTAL_PRICE});
+        dispatch({type: COUNTER})
+    }, [state.products]);
 
     return <AppContext.Provider value={{
         ...state,

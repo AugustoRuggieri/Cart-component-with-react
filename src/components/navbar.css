@@ -1,0 +1,20 @@
+.nav {
+    background-color: var(--primary-blue);
+    box-shadow: var(--light-shadow);
+    height: 100px;
+  }
+  
+.nav-cart {
+    background-color: grey;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    padding: 5px 10px;
+    width: fit-content;
+}
+  
+.nav-icon {
+    color: white;
+    font-size: 1.3rem;
+    margin-right: 8px;
+}

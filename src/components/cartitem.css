@@ -1,0 +1,29 @@
+.prd-info {
+    display: flex;
+    flex-direction: column;
+    
+    text-align: left;
+    justify-self: start;
+}
+
+.prd-name h6 {
+    font-size: 1.2rem;
+    margin: 0;
+    justify-self: start;
+}
+
+.prd-availability {
+    font-size: .9rem;
+}
+
+.qty-selector {
+    display: flex;
+}
+
+.qty {
+    margin: 0 10px;
+}
+
+.price {
+    font-weight: bold;
+}

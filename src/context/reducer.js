@@ -4,7 +4,8 @@ import {
     EMPTY_CART,
     ADD_ITEM,
     REMOVE_ITEM,
-    TOTAL_PRICE
+    TOTAL_PRICE,
+    COUNTER
  } from './actions'
 
 const reducer = (state, {type, payload}) => {
@@ -48,7 +49,18 @@ const reducer = (state, {type, payload}) => {
     }
     if(type === TOTAL_PRICE) {
         return {
-            
+            ...state,
+            total: state.products.reduce((total, item) => {
+                return total + item.qty * item.price
+            }, 0)
+        }
+    }
+    if(type === COUNTER) {
+        return {
+            ...state,
+            itemCounter: state.products.reduce((total, item) => {
+                return total + item.qty
+            }, 0)
         }
     }
 

@@ -18,7 +18,6 @@
   --dark-bg: #222;
   --soft-dark: #272724;
   /* Global */
-  --letter-spacing: 0.08rem;
   --transition: all 0.2s ease;
   --btn-transition: all 0.125s ease;
   --radius: 0.25rem;
@@ -89,6 +88,7 @@ p {
   font-size: 1rem;
   letter-spacing: var(--letter-spacing);
 }
+
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
@@ -147,70 +147,11 @@ p {
 }
 
 /* Project CSS */
-.section-center {
-  width: 95%;
+
+.total-container {
   margin: auto;
+  margin-top: 0;
   padding: 1rem;
-}
-
-.nav {
-  background-color: var(--primary-blue);
-  box-shadow: var(--light-shadow);
-}
-
-.nav-header {
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  -moz-justify-content: space-between;
-  -webkit-justify-content: space-between;
-  -ms-justify-content: space-between;
-  justify-content: space-between;
-  align-items: center;
-  width: 85%;
-  margin: auto;
-}
-
-.nav-brand {
-  display: flex;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: -ms-flex;
-  color: white;
-  padding: 1rem;
-}
-
-.nav-cart {
-  display: grid;
-  display: -moz-grid;
-  display: -ms-grid;
-  display: -webkit-grid;
-  grid-template-columns: auto auto;
-  gap: 0.2rem;
-}
-
-.cart-counter {
-  border-radius: 50%;
-  height: 16px;
-  width: 16px;
-  display: flex;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: -ms-flex;
-  align-items: center;
-  -moz-justify-content: center;
-  -webkit-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  padding: 0.3rem;
-  font-size: 0.6rem;
-  background-color: var(--bg-yellow);
-}
-
-.nav-icon {
-  color: white;
-  font-size: 1.3rem;
 }
 
 .minus-icon {
@@ -254,7 +195,7 @@ p {
   place-items: center;
 }
 
-.total-section {
+.total-container {
   display: flex;
   display: -moz-flex;
   display: -webkit-flex;
@@ -352,6 +293,16 @@ p {
     font-size: 1.4em;
   }
 
+  .cart-container {
+    width: fit-content;
+    margin: auto;
+    padding: 1rem;
+  }
+
+  .total-container {
+    margin-top: 0;
+  }
+
   .cart-item .prd-name {
     font-size: 0.85rem;
   }
@@ -361,7 +312,7 @@ p {
     width: 100px;
   }
 
-  .total-section {
+  .total-container {
     display: flex;
     display: -moz-flex;
     display: -webkit-flex;
