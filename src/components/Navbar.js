@@ -10,7 +10,6 @@ export default function MyNavbar() {
 
         <nav>
             <div className='nav-cart'>
-                <p>Total items: </p>
                 <span><HiShoppingCart className='icon nav-icon' /></span>
                 <span>{itemCounter > 0 && itemCounter}</span>
             </div>

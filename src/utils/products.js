@@ -1,4 +1,4 @@
-const prodotti = [
+const itemList = [
     {
       _id: "1",
       name: "Airpods",
@@ -50,9 +50,9 @@ const prodotti = [
       image:
         "https://res.cloudinary.com/thomasdea/image/upload/v1613472793/react-api-course/cartShop/alexa_blrhqd.jpg",
       price: 29.99,
-      countInStock: 0,
-      qty: 0,
+      countInStock: 2,
+      qty: 1,
     },
   ];
   
-  export default prodotti;
+  export default itemList;

@@ -10,7 +10,9 @@ import {
 
 const reducer = (state, {type, payload}) => {
     if(type === LOADING_DATA) {
-        return {...state, products: payload.map(el => {
+
+        // La proprietà products dell'initialState è un array vuoto che vado a riempire mappando la itemList, che passo tramite il payload
+        return {...state, isLoading: false, products: payload.map(el => {
             return {...el, qty: el.qty}
         })}
     }

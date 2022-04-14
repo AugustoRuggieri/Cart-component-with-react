@@ -1,7 +1,6 @@
 import React from "react";
 import formatNumber from "../utils/formatNumber";
 import { BiMinus, BiPlus } from "react-icons/bi";
-import { MdDelete } from "react-icons/md";
 import { useGlobalContext } from "../context/context";
 import "./cartitem.css";
 
@@ -29,22 +28,23 @@ const CartItem = ({ _id, name, image, price, qty, countInStock }) => {
                 <img src={image} alt="name" className="img" />
             </div>
             <div className="prd-info">
-                <p className="prd-name"><h6>{name}</h6></p>
-                <p className="prd-availability">Availability: {countInStock - qty}</p>
+                <h3 className="prd-name">{name}</h3>
+                <p className="prd-availability">Remaining: {countInStock - qty}</p>
+                <div className="qty-selector">
+                    <button className="icon-btn">
+                        <BiMinus className="icon" onClick={() => checkMinQty(_id)} />
+                    </button>
+                    <p className="qty">{qty}</p>
+                    <button className="icon-btn">
+                        <BiPlus className="icon" onClick={() => checkMaxQty(_id)} />
+                    </button>
+                </div>
+                <p className="remove-btn" onClick={() => deleteItem(_id)}>Remove</p>
             </div>
-            <div className="qty-selector">
-                <button className="icon icon-btn">
-                    <BiMinus className="icon" onClick={() => checkMinQty(_id)} />
-                </button>
-                <p className="qty">{qty}</p>
-                <button className="icon icon-btn">
-                    <BiPlus className="icon" onClick={() => checkMaxQty(_id)} />
-                </button>
+            <div className="price-wrapper">
+                <p className="price">{formatNumber(price)}</p>
             </div>
-            <p className="price">{formatNumber(price)}</p>
-            <button className="btn icon-btn">
-                <MdDelete className="icon minus-icon" onClick={() => deleteItem(_id)} />
-            </button>
+
         </article>
     );
 };

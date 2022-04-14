@@ -1,3 +1,8 @@
+.cart-item {
+    border-bottom: 2px solid #29496b;
+    padding-bottom: 1rem;
+}
+
 .prd-info {
     display: flex;
     flex-direction: column;
@@ -6,8 +11,8 @@
     justify-self: start;
 }
 
-.prd-name h6 {
-    font-size: 1.2rem;
+.prd-name {
+    font-size: 35px;
     margin: 0;
     justify-self: start;
 }
@@ -22,6 +27,20 @@
 
 .qty {
     margin: 0 10px;
+}
+
+.remove-btn {
+    color: #29496b;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: .8rem;
+    width: fit-content;
+}
+
+.price-wrapper {
+    display: flex;
+    justify-self: end;
+    margin-right: 2rem;
 }
 
 .price {
